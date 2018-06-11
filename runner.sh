@@ -1,2 +1,2 @@
 #!/bin/bash
-docker build -t sfm . && docker run --rm -v `pwd`:/datasets sfm cup/ o3/
+docker build -t sfm . && docker run --rm -v `pwd`:/datasets sfm xuti/ xuti_output/

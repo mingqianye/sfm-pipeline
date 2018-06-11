@@ -52,7 +52,7 @@ OPENMVG_BIN = "/opt/openmvg/bin"
 OPENMVS_BIN = "/opt/openmvs/bin/OpenMVS/"
 
 # Indicate the openMVG camera sensor width directory
-CAMERA_SENSOR_WIDTH_DIRECTORY = "opt/openmvg/share/openMVG"
+CAMERA_SENSOR_WIDTH_DIRECTORY = "/opt/openmvg/share/openMVG"
 
 DEBUG=False
 

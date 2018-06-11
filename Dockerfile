@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM debian:stretch-slim
 MAINTAINER Speden Aave <renfld@gmail.com>
 WORKDIR /tmp
 RUN apt-get update 
@@ -24,11 +24,11 @@ RUN git clone https://github.com/cdcseacave/openMVS.git /tmp/build/openmvs && \
     make -j2 && make install
 RUN rm -rf /tmp/build
 
-RUN echo "iPhone X;4.89" >> /opt/openmvg/share/openMVG/sensor_width_camera_database.txt
+RUN echo "iPhone X;4.99" >> /opt/openmvg/share/openMVG/sensor_width_camera_database.txt
 
 
 COPY MvgMvs_Pipeline.py .
 WORKDIR /datasets
-#ENTRYPOINT ["/usr/bin/python", "MvgMvs_Pipeline.py"]
-ENTRYPOINT ["tail", "-f", "/dev/null"]
+ENTRYPOINT ["/usr/bin/python", "MvgMvs_Pipeline.py"]
+#ENTRYPOINT ["tail", "-f", "/dev/null"]
 #ENTRYPOINT ["/usr/bin/python", "-u", "/opt/pipeline/pipeline.py"]
